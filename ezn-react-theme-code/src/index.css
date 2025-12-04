@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+@theme {
+	--breakpoint-3xl: 120rem;
+	--breakpoint-2lg: 1320px;
+}
+
+:root {
+	--default-light-blue: #0cbdbd;
+	--default-light-blue-hover: #0ca0a0;
+	--prospects-bg-color: #06122a;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	max-width: 100%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+
+	background: #060a18;
+	background: linear-gradient(
+		90deg,
+		rgba(6, 10, 24, 1) 0%,
+		rgba(3, 14, 32, 1) 100%
+	);
+}
+
+#root {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	gap: 125px;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 90vw;
+	max-width: 1400px;
+}
+
+.gradient {
+	background: #060a18;
+	background: linear-gradient(
+		90deg,
+		rgba(6, 10, 24, 1) 0%,
+		rgba(3, 14, 32, 1) 100%
+	);
+}
+
+.header-shadow {
+	background: RGBA(3, 14, 32, 0.7);
+	background: linear-gradient(
+		90deg,
+		rgba(3, 14, 32, 0.5) 100%,
+		rgba(6, 10, 24, 1) 45%
+	);
+}
+.navbar {
+	background-color: var(--prospects-bg-color);
+}
+
+.slick-track {
+	width: 100%;
+}
+
+.posts-carousel-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.posts-carousel {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 50px;
+	width: 100%;
+}
+
+.slick-initialized {
+	display: flex !important;
+	gap: 20px !important;
+}
+
+.slick-initialized .slick-slide div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.slick-dots li button::before {
+	color: var(--default-light-blue) !important;
+}
+
+.slick-prev::before,
+.slick-next::before {
+	color: var(--default-light-blue) !important;
+}
+
+.link {
+	transition: color 0.3s;
+}
+
+.link:hover {
+	color: #cfcfcf;
+}
+
+.page table {
+	padding: 10px 0 10px 0;
+	text-align: start;
+	color: white;
+}
+
+.page table th,
+.page table td {
+	text-align: start;
+}
+
+.page a {
+	color: #0ca0a0;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.page a:hover {
+	color: #075c5c;
+}
+
+
+.mySwiper {
+	--swiper-pagination-color: var(--default-light-blue) !important;
+	--swiper-pagination-bullet-inactive-color: var(
+		--default-light-blue-hover
+	) !important;
+	--swiper-pagination-bullet-inactive-opacity: 0.6 !important;
+}
+
+.swiper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 100px;
+}
+
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.mySwiper .swiper-pagination {
+	position: relative !important;
+	margin-top: 10px !important;
+	bottom: auto !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 25px !important;
+  height: 25px !important;
+	color: var(--default-light-blue) !important;
+}

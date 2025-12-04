@@ -1,0 +1,51 @@
+{
+  "name": "ezn-react-theme",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:wp": "tsc -b && vite build --outDir ../dist",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-brands-svg-icons": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
+    "@fortawesome/react-fontawesome": "^3.1.0",
+    "@tailwindcss/vite": "^4.1.17",
+    "@tanstack/react-query": "^5.90.11",
+    "@tanstack/react-router": "^1.139.11",
+    "@tanstack/react-router-devtools": "^1.136.8",
+    "aos": "^2.3.4",
+    "axios": "^1.13.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-multi-carousel": "^2.8.6",
+    "react-slick": "^0.31.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^12.0.3",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@tanstack/router-plugin": "^1.136.8",
+    "@tanstack/router-vite-plugin": "^1.139.11",
+    "@types/aos": "^3.0.7",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@types/react-slick": "^0.23.13",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.3",
+    "vite": "^7.2.2"
+  }
+}

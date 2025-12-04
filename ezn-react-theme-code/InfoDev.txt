@@ -1,0 +1,60 @@
+Ważne info do bazy danych:
+API zwraca inne rzeczy niż DB
+Podstrony zawarte na stronie znajdują się w ścieżce do api /pages. W bazie danych są one w tabeli posts z parametrem post_type: "page"
+
+Komponenty:
+    Button:
+        przyjmuje propsy:
+            text -> string
+            link -> string -> ścieżka do podstrony tanstack
+            icon -> <FontAwesomeIcon/> -> ikona w przycisku
+    SectionHeader:
+        przyjmuje propsy:
+            title -> string -> główny tekst
+            additionalText -> string[] -> tablica wyświetlanych słów nad tytułem
+            isMainHeader -> bool -> ustawiasz na true dla głównego headera na stronie
+    Informations:
+        Sekcja krókiej informacji ze zdjęciem
+        przyjmuje propsy:
+            title -> string
+            additionalText -> string[] -> wyświetlane nad tytułem
+            text -> string -> krótka informacja
+            imgUrl? -> string -> ścieżka do ewentualnego zdjęcia
+    PostCard:
+        Karta postu
+        Wszystkie dane należy podawać przez funkcję map() w Posts.tsx
+        przyjmuje propsy:
+            id -> number;
+            date? -> Date -> data wstawienia posta
+            title -> string -> tytuł posta
+            content -> string -> tekst wyświetlany na karcie (ograniczony do długości 50)
+            author -> number -> numer identyfikacyjny autora postu
+            icon -> <FontAwesomeIcon/> -> ikona przy autorze
+    Posts (niedokończone):
+        Posty można znaleźć pod ścieżką /posts
+        typy:
+            Title:
+                rendered -> string -> wymagane przy typowaniu danych pobranych z API
+            Content:
+                -||-
+            Post:
+                id -> number
+                title -> Title
+                excerpt -> Content -> wyświetlana część tekstu posta
+                content -> Content -: -||-
+                author -> number -> numer autora postu
+                date? -> string -> data postu
+                icon? -> <FontAwesomeIcon/> -> ikona przy autorze
+        funkcje:
+            removeHtmlTags -> funkcja usuwająca tagi HTML z tekstu otrzymanego z API
+            getPlainText -> robi to samo z ograniczeniem do 50 znaków (używać przy contencie)
+    Value:
+        Karta wartości
+        przyjmuje propsy:
+            title -> string
+            text -> string
+            icon -> <FontAwesomeIcon/>
+    OurValues:
+        W środku tablica valuesTab , na podstawie której wyświetlane są wartości
+
+        
